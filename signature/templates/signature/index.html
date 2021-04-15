@@ -1,47 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <title>Document</title>
-  </head>
-  <body>
+{% extends "signature/base.html" %}
+{% load static %}
+
+{% block content %}
+
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 editor-tab">
           <nav>
             <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-              <a
-                class="nav-item nav-link active"
-                id="nav-home-tab"
-                data-toggle="tab"
-                href="#nav-home"
-                role="tab"
-                aria-controls="nav-home"
-                aria-selected="true"
-                >Details</a
-              >
-              <a
-                class="nav-item nav-link"
-                id="nav-profile-tab"
-                data-toggle="tab"
-                href="#nav-profile"
-                role="tab"
-                aria-controls="nav-profile"
-                aria-selected="false"
-                >Social Media</a
-              >
-              <a
-                class="nav-item nav-link"
-                id="nav-contact-tab"
-                data-toggle="tab"
-                href="#nav-contact"
-                role="tab"
-                aria-controls="nav-contact"
-                aria-selected="false"
+              <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" 
+              role="tab" aria-controls="nav-home" aria-selected="true" >Details</a>
+              <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
+                role="tab" aria-controls="nav-profile" aria-selected="false" >Social Media</a>
+              <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+                role="tab" aria-controls="nav-contact" aria-selected="false"
                 >Images</a
               >
               <a
@@ -628,11 +600,5 @@
 <p><button class="copy">Copy Final</button></p>
 
 <p><button class="samplecopybtn">Copy</button></p>
-
-    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/scripts.js"></script>
-
-  </body>
-</html>
+  
+{% endblock content %}
