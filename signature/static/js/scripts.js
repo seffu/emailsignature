@@ -5,15 +5,24 @@ var departmentname = document.getElementById('form_department').value
 var phonenumber = document.getElementById('form_phone').value
 var emailname = document.getElementById('form_email').value
 var websitename = document.getElementById('form_website').value
+// var facebookicon = document.getElementById('form_facebook').value 
+var facebookicon = "hello"
+var twittericon = document.getElementById('form_twitter').value
+var linkedinicon = document.getElementById('form_linkedin').value
+var youtubeicon = document.getElementById('form_youtube').value
+var whatsappicon = document.getElementById('form_whatsapp').value
+var githubicon = document.getElementById('form_github').value
+
+
 
 $('#form_names').on('input', function() {
     $('#names').text(this.value)
     fullname = this.value
     
   })
-$('#form_company').on('input', function() {
-    $('#company').text(this.value)
-    companyname = this.value
+  $('#form_company').on('input', function() {
+      $('#company').text(this.value)
+      companyname = this.value
   })
 $('#form_designation').on('input', function() {
     $('#designation').text(this.value)
@@ -35,6 +44,36 @@ $('#form_website').on('input', function() {
     $('#website').text(this.value)
     websitename = this.value
   })
+  $('#form_facebook').on('input', function() {
+    $('#facebookid').text(this.value)
+    facebookicon = this.value
+  })
+  $('#form_linkedin').on('input', function() {
+    $('#linkedinid').text(this.value)
+    linkedinicon = this.value
+  })
+  $('#form_twitter').on('input', function() {
+    $('#twitterid').text(this.value)
+    twittericon = this.value
+  })
+  $('#form_github').on('input', function() {
+    $('#githubid').text(this.value)
+    githubicon = this.value
+  })
+  $('#form_youtube').on('input', function() {
+    $('#youtubeid').text(this.value)
+    youtubeicon = this.value
+  })
+  $('#form_instagram').on('input', function() {
+    $('#instagramid').text(this.value)
+    instagramicon = this.value
+  })
+  $('#form_whatsapp').on('input', function() {
+    $('#whatsappid').text(this.value)
+    whatsappicon = this.value
+  })
+
+
 
 var copyEmailBtn = document.querySelector('.js-emailcopybtn');  
 copyEmailBtn.addEventListener('click', function(event) {  
@@ -96,198 +135,132 @@ function oneworld(id) {
     console.log(fullname)
     var bigdiv = document.getElementById("sample2")
     if (id==1){
-        bigdiv.innerHTML = `            <table cellpadding="0" id="one" cellspacing="0" class="sc-gPEVay eQYmiW sample one tab-pane"
-        style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
-        <tbody>
-            <tr>
-                <td>
-                    <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW"
-                        style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
-                        <tbody>
-                            <tr>
-                                <td width="150" style="vertical-align: middle;"><span class="sc-kgAjT cuzzPp"
-                                        style="margin-right: 20px; display: block;"><img
-                                            src="https://d36urhup7zbd7q.cloudfront.net/07018871-3bf0-473c-97fe-022fe1555691/dwight500x500.format_png.resize_200x.png#logo"
-                                            role="presentation" width="130" class="sc-cHGsZl bHiaRe"
-                                            style="max-width: 130px;border-radius: 50%;"></span></td>
-                                <td style="vertical-align: middle;">
-                                    <h3 color="#000000" id="names"
-                                        style="margin: 0px; font-size: 18px; color: rgb(0, 0, 0);">${fullname}</h3>
-                                    <p color="#000000" font-size="medium" class="sc-fMiknA bxZCMx"
-                                        style="margin: 0px; color: rgb(0, 0, 0); font-size: 14px; line-height: 22px;">
-                                        <span id="designation">${designationname}</span></p>
-                                    <p color="#000000" font-size="medium" class="sc-dVhcbM fghLuF"
-                                        style="margin: 0px; font-weight: 500; color: rgb(0, 0, 0); font-size: 14px; line-height: 22px;">
-                                        <span id="department">${departmentname}</span><span>&nbsp;|&nbsp;</span><span id="company">${companyname}</span>
-                                    </p>
-                                </td>
-                                <td width="30">
-                                    <div style="width: 30px;"></div>
-                                </td>
-                                <td color="#ff7f00" direction="vertical" width="1" class="sc-jhAzac hmXDXQ"
-                                    style="width: 1px; border-bottom: none; border-left: 1px solid rgb(255, 127, 0);"></td>
-                                <td width="30">
-                                    <div style="width: 30px;"></div>
-                                </td>
-                                <td style="vertical-align: middle;">
-                                    <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW"
-                                        style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
-                                        <tbody>
-                                            <tr height="25" style="vertical-align: middle;">
-                                                <td width="30" style="vertical-align: middle;">
-                                                    <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW"
-                                                        style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td style="vertical-align: bottom;"><span color="#ff7f00"
-                                                                        width="11" class="sc-jlyJG bbyJzT"
-                                                                        style="display: block; background-color: rgb(255, 127, 0);"><img
-                                                                            src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/phone-icon-2x.png"
-                                                                            color="#ff7f00" width="13"
-                                                                            class="sc-iRbamj blSEcj"
-                                                                            style="display: block; background-color: rgb(255, 127, 0);"></span>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                                <td style="padding: 0px; color: rgb(0, 0, 0);"><a
-                                                        href="tel:${phonenumber}" color="#000000" class="sc-gipzik iyhjGb"
-                                                        style="text-decoration: none; color: rgb(0, 0, 0); font-size: 12px;"><span id="phone">${phonenumber}</span></a></td>
-                                            </tr>
-                                            <tr height="25" style="vertical-align: middle;">
-                                                <td width="30" style="vertical-align: middle;">
-                                                    <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW"
-                                                        style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td style="vertical-align: bottom;"><span color="#ff7f00"
-                                                                        width="11" class="sc-jlyJG bbyJzT"
-                                                                        style="display: block; background-color: rgb(255, 127, 0);"><img
-                                                                            src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/email-icon-2x.png"
-                                                                            color="#ff7f00" width="13"
-                                                                            class="sc-iRbamj blSEcj"
-                                                                            style="display: block; background-color: rgb(255, 127, 0);"></span>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                                <td style="padding: 0px;"><a href="mailto:${emailname}" color="#000000"
-                                                        class="sc-gipzik iyhjGb"
-                                                        style="text-decoration: none; color: rgb(0, 0, 0); font-size: 12px;"><span id="email">${emailname}</span></a>
-                                                </td>
-                                            </tr>
-                                            <tr height="25" style="vertical-align: middle;">
-                                                <td width="30" style="vertical-align: middle;">
-                                                    <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW"
-                                                        style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td style="vertical-align: bottom;"><span color="#ff7f00"
-                                                                        width="11" class="sc-jlyJG bbyJzT"
-                                                                        style="display: block; background-color: rgb(255, 127, 0);"><img
-                                                                            src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/link-icon-2x.png"
-                                                                            color="#ff7f00" width="13"
-                                                                            class="sc-iRbamj blSEcj"
-                                                                            style="display: block; background-color: rgb(255, 127, 0);"></span>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                                <td style="padding: 0px;"><a href="${websitename}" color="#000000"
-                                                        class="sc-gipzik iyhjGb"
-                                                        style="text-decoration: none; color: rgb(0, 0, 0); font-size: 12px;"><span id="website">${websitename}</span></a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW"
-                        style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial; width: 100%;">
-                        <tbody>
-                            <tr>
-                                <td height="30"></td>
-                            </tr>
-                            <tr>
-                                <td color="#ff7f00" direction="horizontal" height="1" class="sc-jhAzac hmXDXQ"
-                                    style="width: 100%; border-bottom: 1px solid rgb(255, 127, 0); border-left: none; display: block;">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td height="30"></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW"
-                        style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial; width: 100%;">
-                        <tbody>
-                            <tr>
-                                <td style="vertical-align: top;"><img
-                                        src="https://drive.google.com/uc?id=1HJIOSoLSWunM_LRnxaV6rL5Bfj3tRutz"
-                                        role="presentation" width="130" class="sc-cHGsZl bHiaRe"
-                                        style="max-width: 130px; display: inline-block;"></td>
-                                <td style="text-align: right; vertical-align: top;">
-                                    <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW"
-                                        style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial; display: inline-block;">
-                                        <tbody>
-                                            <tr style="text-align: right;">
-                                                <td><a href="https://www.facebook.com/joshsmith" color="#6A78D1"
-                                                        class="sc-hzDkRC kpsoyz"
-                                                        style="display: inline-block; padding: 0px; background-color: rgb(106, 120, 209);"><img
-                                                            src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/facebook-icon-2x.png"
-                                                            alt="facebook" color="#6A78D1" height="24"
-                                                            class="sc-bRBYWo ccSRck"
-                                                            style="background-color: rgb(106, 120, 209); max-width: 135px; display: block;"></a>
-                                                </td>
-                                                <td width="5">
-                                                    <div></div>
-                                                </td>
-                                                <td><a href="https://www.twitter.com/joshsmith" color="#6A78D1"
-                                                        class="sc-hzDkRC kpsoyz"
-                                                        style="display: inline-block; padding: 0px; background-color: rgb(106, 120, 209);"><img
-                                                            src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/twitter-icon-2x.png"
-                                                            alt="twitter" color="#6A78D1" height="24"
-                                                            class="sc-bRBYWo ccSRck"
-                                                            style="background-color: rgb(106, 120, 209); max-width: 135px; display: block;"></a>
-                                                </td>
-                                                <td width="5">
-                                                    <div></div>
-                                                </td>
-                                                <td><a href="https://www.linkedin.com/josh-smith" color="#6A78D1"
-                                                        class="sc-hzDkRC kpsoyz"
-                                                        style="display: inline-block; padding: 0px; background-color: rgb(106, 120, 209);"><img
-                                                            src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/linkedin-icon-2x.png"
-                                                            alt="linkedin" color="#6A78D1" height="24"
-                                                            class="sc-bRBYWo ccSRck"
-                                                            style="background-color: rgb(106, 120, 209); max-width: 135px; display: block;"></a>
-                                                </td>
-                                                <td width="5">
-                                                    <div></div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-        </tbody>
-        </table>`
+        bigdiv.innerHTML = `<table border="0" cellpadding="0" cellspacing="0" class="x_MsoNormalTable" style="border-collapse:collapse">
+                <tbody>
+                    <tr>
+                        <td valign="top" width="60" style="width:45.0pt; padding:0in 5.4pt 0in 5.4pt">
+                            <p class="x_MsoNormal"><span style="font-size:8.0pt"><img data-imagetype="AttachmentByCid"
+                                        originalsrc="cid:com_samsung_android_email_attachmentprovider_6_53692_RAW_1617949115483"
+                                        data-custom="AAMkAGQ3NzUyYzU1LTdjOWItNGNlMy04NjRlLWVmYmI0YmQ4OWQ1NQBGAAAAAACNCSk%2FGT%2BLQ5z2VfV9wzCLBwDrKcEeOPLOQZ0fS0ts2b8nAAAAAAEMAADrKcEeOPLOQZ0fS0ts2b8nAAAgp%2B2XAAABEgAQAL4f8%2FD%2FCR1Nlbi0JQMdfTc%3D"
+                                        naturalheight="0" naturalwidth="0"
+                                        src="https://attachments.office.net/owa/fredrick.simi%40zalda.net/service.svc/s/GetAttachmentThumbnail?id=AAMkAGQ3NzUyYzU1LTdjOWItNGNlMy04NjRlLWVmYmI0YmQ4OWQ1NQBGAAAAAACNCSk%2FGT%2BLQ5z2VfV9wzCLBwDrKcEeOPLOQZ0fS0ts2b8nAAAAAAEMAADrKcEeOPLOQZ0fS0ts2b8nAAAgp%2B2XAAABEgAQAL4f8%2FD%2FCR1Nlbi0JQMdfTc%3D&amp;thumbnailType=2&amp;token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjMwODE3OUNFNUY0QjUyRTc4QjJEQjg5NjZCQUY0RUNDMzcyN0FFRUUiLCJ0eXAiOiJKV1QiLCJ4NXQiOiJNSUY1emw5TFV1ZUxMYmlXYTY5T3pEY25ydTQifQ.eyJvcmlnaW4iOiJodHRwczovL291dGxvb2sub2ZmaWNlLmNvbSIsInVjIjoiMjkzZDUyMDFjM2ZkNDVjMThkMDc2ZGY1ODU1MzgzNDIiLCJzaWduaW5fc3RhdGUiOiJbXCJrbXNpXCJdIiwidmVyIjoiRXhjaGFuZ2UuQ2FsbGJhY2suVjEiLCJhcHBjdHhzZW5kZXIiOiJPd2FEb3dubG9hZEA0MDcxNTI2ZS02ODQ1LTRhNjgtYjYxMC1mYWE0NDZlNWVhMjYiLCJpc3NyaW5nIjoiV1ciLCJhcHBjdHgiOiJ7XCJtc2V4Y2hwcm90XCI6XCJvd2FcIixcInB1aWRcIjpcIjExNTM4MDExMTg1OTczMTc4NTdcIixcInNjb3BlXCI6XCJPd2FEb3dubG9hZFwiLFwib2lkXCI6XCI1M2QzMDhkOS1jZmFhLTQ0ZjQtYmM3Zi1iZjc1ZTlmYjM4NDJcIixcInByaW1hcnlzaWRcIjpcIlMtMS01LTIxLTcyMzA3ODY1OS0xMTQyMDE4MjAyLTYxMzIyMDUwOC0zNDMzNTM3NFwifSIsIm5iZiI6MTYxODU1MDQxMCwiZXhwIjoxNjE4NTUxMDEwLCJpc3MiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDBANDA3MTUyNmUtNjg0NS00YTY4LWI2MTAtZmFhNDQ2ZTVlYTI2IiwiYXVkIjoiMDAwMDAwMDItMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL2F0dGFjaG1lbnRzLm9mZmljZS5uZXRANDA3MTUyNmUtNjg0NS00YTY4LWI2MTAtZmFhNDQ2ZTVlYTI2IiwiaGFwcCI6Im93YSJ9.Mp0w04OqsmiUfe-GlfG_ET0X5XQzej7Wr0ZF1iGFLPxa8Lbf3Q6veCSwp9IC_HGwd872EwcpMHlq9197iSPzDOhKDtWscmHd4t4n717Mh8ez9TuZR-DKcBQ-3eXebRjAMJlWzsyydhqX_KZsESwnk4dximfjde6uW3hkR1mbqx28t_GGUzOXP4D-cQL4I2sV9rfixUQP2YneY_FoSwbY94L-MF2VBN4StS0zUCzeGxy8U37X-2pgJ-y0YVaCHX-9wmMkW9Dx6tKY05KnAX7AvPnUulnqfnXzgxwfEgTGr6HVbeXhNB7sCOLuCIbwe3zjzHr4kiNo4LRuTBmAhXKILg&amp;X-OWA-CANARY=Hr0yQDVDOki-Vcq5AytJAlDLIWiXANkYIHFC5R-55v9qZGdT85Sp4vPao4-hDWcitbi5hrrYRlw.&amp;owa=outlook.office.com&amp;scriptVer=20210412005.10&amp;animation=true"
+                                        border="0" width="64" height="64" alt="Edit photo" id="x_Picture_x0020_7"
+                                        name="x_com_samsung_android_email_attachmentprovider_6_53692_RAW_1617949115483"
+                                        style="width: 0.6666in; height: 0.6666in; cursor: pointer;"
+                                        crossorigin="use-credentials"></span></p>
+                        </td>
+                        <td valign="top" width="250" style="width:187.45pt; padding:0in 5.4pt 0in 5.4pt">
+                            <p class="x_MsoNormal"><b><span
+                                        style="font-size:11.0pt; font-family:&quot;Arial&quot;,sans-serif; color:#7FC41C">Chris
+                                        Harrison</span></b><b><span
+                                        style="font-family:&quot;Arial&quot;,sans-serif; color:#7FC41C"></span></b></p>
+                            <p class="x_MsoNormal"><span
+                                    style="font-size:8.0pt; font-family:&quot;Arial&quot;,sans-serif">Chief Executive
+                                    Officer</span></p>
+                            <table border="0" width="100" cellpadding="0" cellspacing="0" class="x_MsoNormalTable"
+                                style="width:75.0pt">
+                                <tbody>
+                                    <tr>
+                                        <td style="padding:3.75pt 3.75pt 0in 0in">
+                                            <p class="x_MsoNormal"><a
+                                                    href="https://www.linkedin.com/in/christopherharrisonesq/"
+                                                    target="_blank" rel="noopener noreferrer" data-auth="NotApplicable"
+                                                    data-linkindex="0" data-ogsc=""
+                                                    style="color: rgb(228, 159, 255) !important;"><span
+                                                        style="font-size: 13.5pt; font-family: Times; color: rgb(222, 152, 255) !important; text-decoration: none;"
+                                                        data-ogsc="blue"><img id="linkedinid"  
+                                                            naturalheight="0" naturalwidth="0"
+                                                            src="https://img.icons8.com/material-rounded/50/000000/linkedin--v1.png"
+                                                            border="0" 
+                                                            style="width: 0.25in; height: 0.25in;"></span></a><span
+                                                    style="font-size: 13.5pt; font-family: Times; color: rgb(255, 255, 255) !important;"
+                                                    data-ogsc="black"></span></p>
+                                        </td>
+                                        <td style="padding:3.75pt 3.75pt 0in 0in">
+                                            <p class="x_MsoNormal"><a href="https://twitter.com/StepWiseAfrica"
+                                                    target="_blank" rel="noopener noreferrer" data-auth="NotApplicable"
+                                                    data-linkindex="1" data-ogsc=""
+                                                    style="color: rgb(228, 159, 255) !important;"><span
+                                                        style="font-size: 13.5pt; font-family: Times; color: rgb(222, 152, 255) !important; text-decoration: none;"
+                                                        data-ogsc="blue"><img id="twitterid" 
+                                                            naturalheight="0" naturalwidth="0"
+                                                            src="https://img.icons8.com/material-rounded/50/000000/twitter.png"
+                                                            border="0"
+                                                            style="width: 0.25in; height: 0.25in;"></span></a><span
+                                                    style="font-size: 13.5pt; font-family: Times; color: rgb(255, 255, 255) !important;"
+                                                    data-ogsc="black"></span></p>
+                                        </td>
+                                        <td style="padding:3.75pt 3.75pt 0in 0in">
+                                            <p class="x_MsoNormal"><a href="https://twitter.com/StepWiseAfrica"
+                                                    target="_blank" rel="noopener noreferrer" data-auth="NotApplicable"
+                                                    data-linkindex="1" data-ogsc=""
+                                                    style="color: rgb(228, 159, 255) !important; display:${facebookicon?`block`:`none`}"><span
+                                                        style="font-size: 13.5pt; font-family: Times; color: rgb(222, 152, 255) !important; text-decoration: none;"
+                                                        data-ogsc="blue"><img id="facebookid" 
+                                                            naturalheight="0" naturalwidth="0"
+                                                            src="https://img.icons8.com/material-rounded/50/000000/facebook.png"
+                                                            border="0"
+                                                            style="width: 0.25in; height: 0.25in;"></span></a><span
+                                                    style="font-size: 13.5pt; font-family: Times; color: rgb(255, 255, 255) !important;"
+                                                    data-ogsc="black"></span></p>
+                                        </td>
+                                        <td style="padding:3.75pt 3.75pt 0in 0in">
+                                            <p class="x_MsoNormal"><a href="https://twitter.com/StepWiseAfrica"
+                                                    target="_blank" rel="noopener noreferrer" data-auth="NotApplicable"
+                                                    data-linkindex="1" data-ogsc=""
+                                                    style="color: rgb(228, 159, 255) !important;"><span
+                                                        style="font-size: 13.5pt; font-family: Times; color: rgb(222, 152, 255) !important; text-decoration: none;"
+                                                        data-ogsc="blue"><img id="youtubeid" 
+                                                            naturalheight="0" naturalwidth="0"
+                                                            src="https://img.icons8.com/material-rounded/50/000000/youtube-play.png"
+                                                            border="0"
+                                                            style="width: 0.25in; height: 0.25in;"></span></a><span
+                                                    style="font-size: 13.5pt; font-family: Times; color: rgb(255, 255, 255) !important;"
+                                                    data-ogsc="black"></span></p>
+                                        </td>
+                                        <td style="padding:3.75pt 3.75pt 0in 0in">
+                                            <p class="x_MsoNormal"><a href="https://twitter.com/StepWiseAfrica"
+                                                    target="_blank" rel="noopener noreferrer" data-auth="NotApplicable"
+                                                    data-linkindex="1" data-ogsc=""
+                                                    style="color: rgb(228, 159, 255) !important;"><span
+                                                        style="font-size: 13.5pt; font-family: Times; color: rgb(222, 152, 255) !important; text-decoration: none;"
+                                                        data-ogsc="blue"><img id="whatsappid" 
+                                                            naturalheight="0" naturalwidth="0"
+                                                            src="https://img.icons8.com/material-rounded/40/000000/whatsapp.png"
+                                                            border="0"
+                                                            style="width: 0.25in; height: 0.25in;"></span></a><span
+                                                    style="font-size: 13.5pt; font-family: Times; color: rgb(255, 255, 255) !important;"
+                                                    data-ogsc="black"></span></p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="x_MsoNormal"><b><span lang="FR-CA" style="font-size: 8pt; color: rgb(255, 169, 59) !important;"
+                        data-ogsc="rgb(225, 127, 0)">Mobile</span></b><b><span lang="FR-CA"
+                        style="font-size:8.0pt">:</span></b><span lang="FR-CA" style="font-size:8.0pt">
+                    +1-512-771-0520&nbsp; <b><span style="color: rgb(255, 169, 59) !important;"
+                            data-ogsc="rgb(225, 127, 0)">Email</span>:</b> <a href="mailto:chris@stepwise.net"
+                        target="_blank" rel="noopener noreferrer" data-auth="NotApplicable" data-linkindex="5"
+                        data-ogsc="" style="color: rgb(228, 159, 255) !important;"><span
+                            style="color: rgb(138, 184, 255) !important;"
+                            data-ogsc="rgb(5, 99, 193)">chris@stepwise.net</span></a> </span></p>
+            <hr width="100%" style="border: 2px solid #7FC41C; float:left; clear:both;" ><br>
+            <p class="x_MsoNormal"><b><span style="font-size: 8pt; color: rgb(255, 169, 59) !important;"
+                        data-ogsc="rgb(225, 127, 0)">Web</span></b><b><span style="font-size:8.0pt">:</span></b><span
+                    style="font-size:8.0pt"> <a href="http://www.stepwise.net" target="_blank" rel="noopener noreferrer"
+                        data-auth="NotApplicable" data-linkindex="6" data-ogsc=""
+                        style="color: rgb(228, 159, 255) !important;"><span
+                            style="color: rgb(138, 184, 255) !important;"
+                            data-ogsc="rgb(5, 99, 193)">www.stepwise.net</span></a> &nbsp;<b><span
+                            style="color: rgb(255, 169, 59) !important;"
+                            data-ogsc="rgb(225, 127, 0)">Address</span>:</b> 701 Brazos St., Austin, TX 78701</span></p>
+        </div>
+        <p class="x_MsoNormal">&nbsp;</p>
+    </div>`
     } else if (id==2){
         bigdiv.innerHTML = `            <div id="two" class="o-signature-preview sample two tab-pane">
         <div>
@@ -561,5 +534,198 @@ function oneworld(id) {
             </tbody>
         </table>
         </div>`
+    } else if(id==4){
+        bigdiv.innerHTML = `            <table cellpadding="0" id="one" cellspacing="0" class="sc-gPEVay eQYmiW sample one tab-pane"
+        style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
+        <tbody>
+            <tr>
+                <td>
+                    <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW"
+                        style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
+                        <tbody>
+                            <tr>
+                                <td width="150" style="vertical-align: middle;"><span class="sc-kgAjT cuzzPp"
+                                        style="margin-right: 20px; display: block;"><img
+                                            src="https://d36urhup7zbd7q.cloudfront.net/07018871-3bf0-473c-97fe-022fe1555691/dwight500x500.format_png.resize_200x.png#logo"
+                                            role="presentation" width="130" class="sc-cHGsZl bHiaRe"
+                                            style="max-width: 130px;border-radius: 50%;"></span></td>
+                                <td style="vertical-align: middle;">
+                                    <h3 color="#000000" id="names"
+                                        style="margin: 0px; font-size: 18px; color: rgb(0, 0, 0);">${fullname}</h3>
+                                    <p color="#000000" font-size="medium" class="sc-fMiknA bxZCMx"
+                                        style="margin: 0px; color: rgb(0, 0, 0); font-size: 14px; line-height: 22px;">
+                                        <span id="designation">${designationname}</span></p>
+                                    <p color="#000000" font-size="medium" class="sc-dVhcbM fghLuF"
+                                        style="margin: 0px; font-weight: 500; color: rgb(0, 0, 0); font-size: 14px; line-height: 22px;">
+                                        <span id="department">${departmentname}</span><span>&nbsp;|&nbsp;</span><span id="company">${companyname}</span>
+                                    </p>
+                                </td>
+                                <td width="30">
+                                    <div style="width: 30px;"></div>
+                                </td>
+                                <td color="#ff7f00" direction="vertical" width="1" class="sc-jhAzac hmXDXQ"
+                                    style="width: 1px; border-bottom: none; border-left: 1px solid rgb(255, 127, 0);"></td>
+                                <td width="30">
+                                    <div style="width: 30px;"></div>
+                                </td>
+                                <td style="vertical-align: middle;">
+                                    <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW"
+                                        style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
+                                        <tbody>
+                                            <tr height="25" style="vertical-align: middle;">
+                                                <td width="30" style="vertical-align: middle;">
+                                                    <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW"
+                                                        style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="vertical-align: bottom;"><span color="#ff7f00"
+                                                                        width="11" class="sc-jlyJG bbyJzT"
+                                                                        style="display: block; background-color: rgb(255, 127, 0);"><img
+                                                                            src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/phone-icon-2x.png"
+                                                                            color="#ff7f00" width="13"
+                                                                            class="sc-iRbamj blSEcj"
+                                                                            style="display: block; background-color: rgb(255, 127, 0);"></span>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td style="padding: 0px; color: rgb(0, 0, 0);"><a
+                                                        href="tel:${phonenumber}" color="#000000" class="sc-gipzik iyhjGb"
+                                                        style="text-decoration: none; color: rgb(0, 0, 0); font-size: 12px;"><span id="phone">${phonenumber}</span></a></td>
+                                            </tr>
+                                            <tr height="25" style="vertical-align: middle;">
+                                                <td width="30" style="vertical-align: middle;">
+                                                    <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW"
+                                                        style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="vertical-align: bottom;"><span color="#ff7f00"
+                                                                        width="11" class="sc-jlyJG bbyJzT"
+                                                                        style="display: block; background-color: rgb(255, 127, 0);"><img
+                                                                            src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/email-icon-2x.png"
+                                                                            color="#ff7f00" width="13"
+                                                                            class="sc-iRbamj blSEcj"
+                                                                            style="display: block; background-color: rgb(255, 127, 0);"></span>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td style="padding: 0px;"><a href="mailto:${emailname}" color="#000000"
+                                                        class="sc-gipzik iyhjGb"
+                                                        style="text-decoration: none; color: rgb(0, 0, 0); font-size: 12px;"><span id="email">${emailname}</span></a>
+                                                </td>
+                                            </tr>
+                                            <tr height="25" style="vertical-align: middle;">
+                                                <td width="30" style="vertical-align: middle;">
+                                                    <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW"
+                                                        style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="vertical-align: bottom;"><span color="#ff7f00"
+                                                                        width="11" class="sc-jlyJG bbyJzT"
+                                                                        style="display: block; background-color: rgb(255, 127, 0);"><img
+                                                                            src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/link-icon-2x.png"
+                                                                            color="#ff7f00" width="13"
+                                                                            class="sc-iRbamj blSEcj"
+                                                                            style="display: block; background-color: rgb(255, 127, 0);"></span>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td style="padding: 0px;"><a href="${websitename}" color="#000000"
+                                                        class="sc-gipzik iyhjGb"
+                                                        style="text-decoration: none; color: rgb(0, 0, 0); font-size: 12px;"><span id="website">${websitename}</span></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW"
+                        style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial; width: 100%;">
+                        <tbody>
+                            <tr>
+                                <td height="30"></td>
+                            </tr>
+                            <tr>
+                                <td color="#ff7f00" direction="horizontal" height="1" class="sc-jhAzac hmXDXQ"
+                                    style="width: 100%; border-bottom: 1px solid rgb(255, 127, 0); border-left: none; display: block;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="30"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW"
+                        style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial; width: 100%;">
+                        <tbody>
+                            <tr>
+                                <td style="vertical-align: top;"><img
+                                        src="https://drive.google.com/uc?id=1HJIOSoLSWunM_LRnxaV6rL5Bfj3tRutz"
+                                        role="presentation" width="130" class="sc-cHGsZl bHiaRe"
+                                        style="max-width: 130px; display: inline-block;"></td>
+                                <td style="text-align: right; vertical-align: top;">
+                                    <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW"
+                                        style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial; display: inline-block;">
+                                        <tbody>
+                                            <tr style="text-align: right;">
+                                                <td><a href="https://www.facebook.com/joshsmith" color="#6A78D1"
+                                                        class="sc-hzDkRC kpsoyz"
+                                                        style="display: inline-block; padding: 0px; background-color: rgb(106, 120, 209);"><img
+                                                            src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/facebook-icon-2x.png"
+                                                            alt="facebook" color="#6A78D1" height="24"
+                                                            class="sc-bRBYWo ccSRck"
+                                                            style="background-color: rgb(106, 120, 209); max-width: 135px; display: block;"></a>
+                                                </td>
+                                                <td width="5">
+                                                    <div></div>
+                                                </td>
+                                                <td><a href="https://www.twitter.com/joshsmith" color="#6A78D1"
+                                                        class="sc-hzDkRC kpsoyz"
+                                                        style="display: inline-block; padding: 0px; background-color: rgb(106, 120, 209);"><img
+                                                            src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/twitter-icon-2x.png"
+                                                            alt="twitter" color="#6A78D1" height="24"
+                                                            class="sc-bRBYWo ccSRck"
+                                                            style="background-color: rgb(106, 120, 209); max-width: 135px; display: block;"></a>
+                                                </td>
+                                                <td width="5">
+                                                    <div></div>
+                                                </td>
+                                                <td><a href="https://www.linkedin.com/josh-smith" color="#6A78D1"
+                                                        class="sc-hzDkRC kpsoyz"
+                                                        style="display: inline-block; padding: 0px; background-color: rgb(106, 120, 209);"><img
+                                                            src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/linkedin-icon-2x.png"
+                                                            alt="linkedin" color="#6A78D1" height="24"
+                                                            class="sc-bRBYWo ccSRck"
+                                                            style="background-color: rgb(106, 120, 209); max-width: 135px; display: block;"></a>
+                                                </td>
+                                                <td width="5">
+                                                    <div></div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+        </table>`
     }
 }

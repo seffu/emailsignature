@@ -54,37 +54,33 @@
                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                     <form>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="linkedin" aria-describedby="linkedin"
-                                placeholder="linkedin">
+                            <input type="text" id="form_linkedin" class="form-control" id="linkedin" aria-describedby="linkedin"
+                                placeholder="https://linkedin.com/johnwick">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="twitter" aria-describedby="twitter"
-                                placeholder="twitter">
+                            <input type="text" id="form_twitter" class="form-control" id="twitter" aria-describedby="twitter"
+                                placeholder="https://twitter.com/johnwick">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="facebook" aria-describedby="facebook"
-                                placeholder="facebook">
+                            <input type="text" id="form_facebook" class="form-control" id="facebook" aria-describedby="facebook"
+                                placeholder="https://facebook.com/johnwick">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="instagram" aria-describedby="instagram"
-                                placeholder="instagram">
+                            <input type="text" id="form_instagram" class="form-control" id="instagram" aria-describedby="instagram"
+                                placeholder="https://instagram.com/johnwick">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="github" aria-describedby="github"
-                                placeholder="github">
+                            <input type="text" id="form_github" class="form-control" id="github" aria-describedby="github"
+                                placeholder="https://github.com/johnwick">
                         </div>
                     </form>
                 </div>
                 <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                    Et et consectetur ipsum labore excepteur est proident excepteur ad
-                    velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt
-                    anim aliqua enim pariatur veniam sunt est aute sit dolor anim.
-                    Velit non irure adipisicing aliqua ullamco irure incididunt irure
-                    non esse consectetur nostrud minim non minim occaecat. Amet duis
-                    do nisi duis veniam non est eiusmod tempor incididunt tempor dolor
-                    ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non
-                    adipisicing reprehenderit do dolore. Duis reprehenderit occaecat
-                    anim ullamco ad duis occaecat ex.
+                    <form method="post">
+                        {% csrf_token %}
+                        {{form.image}}
+                        <input type="submit" value="Upload" class="btn btn-primary">
+                    </form>
                 </div>
                 <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
                     <div class="paymentWrap">
@@ -101,7 +97,11 @@
                                 <div class="method amex"></div>
                                 <input type="radio" name="template" onchange="oneworld(3)">
                             </label>
-                            <a href="" onclick="oneworld()">Click here</a>
+                            <label class="btn paymentMethod">
+                                <div class="method ez-ch"></div>
+                                <input type="radio" name="template" onchange="oneworld(4)">
+                            </label>
+                            
                         </div>
                     </div>
                 </div>
