@@ -1,7 +1,7 @@
 from django import forms
-from .models import SignatureTool
+from .models import UserImage
 
-class SignatureToolForm(forms.ModelForm):
+class UserImageForm(forms.ModelForm):
     class Meta:
-        model = SignatureTool
+        model = UserImage
         fields = ['image']

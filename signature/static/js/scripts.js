@@ -6,7 +6,7 @@ var phonenumber = document.getElementById('form_phone').value
 var emailname = document.getElementById('form_email').value
 var websitename = document.getElementById('form_website').value
 // var facebookicon = document.getElementById('form_facebook').value 
-var facebookicon = "hello"
+var facebookicon = document.getElementById('form_facebook').value
 var twittericon = document.getElementById('form_twitter').value
 var linkedinicon = document.getElementById('form_linkedin').value
 var youtubeicon = document.getElementById('form_youtube').value
@@ -135,35 +135,27 @@ function oneworld(id) {
     console.log(fullname)
     var bigdiv = document.getElementById("sample2")
     if (id==1){
-        bigdiv.innerHTML = `<table border="0" cellpadding="0" cellspacing="0" class="x_MsoNormalTable" style="border-collapse:collapse">
+        bigdiv.innerHTML = `<table border="0" cellpadding="0" cellspacing="0" class="sample" style="border-collapse:collapse">
                 <tbody>
                     <tr>
                         <td valign="top" width="60" style="width:45.0pt; padding:0in 5.4pt 0in 5.4pt">
-                            <p class="x_MsoNormal"><span style="font-size:8.0pt"><img data-imagetype="AttachmentByCid"
-                                        originalsrc="cid:com_samsung_android_email_attachmentprovider_6_53692_RAW_1617949115483"
-                                        data-custom="AAMkAGQ3NzUyYzU1LTdjOWItNGNlMy04NjRlLWVmYmI0YmQ4OWQ1NQBGAAAAAACNCSk%2FGT%2BLQ5z2VfV9wzCLBwDrKcEeOPLOQZ0fS0ts2b8nAAAAAAEMAADrKcEeOPLOQZ0fS0ts2b8nAAAgp%2B2XAAABEgAQAL4f8%2FD%2FCR1Nlbi0JQMdfTc%3D"
-                                        naturalheight="0" naturalwidth="0"
-                                        src="https://attachments.office.net/owa/fredrick.simi%40zalda.net/service.svc/s/GetAttachmentThumbnail?id=AAMkAGQ3NzUyYzU1LTdjOWItNGNlMy04NjRlLWVmYmI0YmQ4OWQ1NQBGAAAAAACNCSk%2FGT%2BLQ5z2VfV9wzCLBwDrKcEeOPLOQZ0fS0ts2b8nAAAAAAEMAADrKcEeOPLOQZ0fS0ts2b8nAAAgp%2B2XAAABEgAQAL4f8%2FD%2FCR1Nlbi0JQMdfTc%3D&amp;thumbnailType=2&amp;token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjMwODE3OUNFNUY0QjUyRTc4QjJEQjg5NjZCQUY0RUNDMzcyN0FFRUUiLCJ0eXAiOiJKV1QiLCJ4NXQiOiJNSUY1emw5TFV1ZUxMYmlXYTY5T3pEY25ydTQifQ.eyJvcmlnaW4iOiJodHRwczovL291dGxvb2sub2ZmaWNlLmNvbSIsInVjIjoiMjkzZDUyMDFjM2ZkNDVjMThkMDc2ZGY1ODU1MzgzNDIiLCJzaWduaW5fc3RhdGUiOiJbXCJrbXNpXCJdIiwidmVyIjoiRXhjaGFuZ2UuQ2FsbGJhY2suVjEiLCJhcHBjdHhzZW5kZXIiOiJPd2FEb3dubG9hZEA0MDcxNTI2ZS02ODQ1LTRhNjgtYjYxMC1mYWE0NDZlNWVhMjYiLCJpc3NyaW5nIjoiV1ciLCJhcHBjdHgiOiJ7XCJtc2V4Y2hwcm90XCI6XCJvd2FcIixcInB1aWRcIjpcIjExNTM4MDExMTg1OTczMTc4NTdcIixcInNjb3BlXCI6XCJPd2FEb3dubG9hZFwiLFwib2lkXCI6XCI1M2QzMDhkOS1jZmFhLTQ0ZjQtYmM3Zi1iZjc1ZTlmYjM4NDJcIixcInByaW1hcnlzaWRcIjpcIlMtMS01LTIxLTcyMzA3ODY1OS0xMTQyMDE4MjAyLTYxMzIyMDUwOC0zNDMzNTM3NFwifSIsIm5iZiI6MTYxODU1MDQxMCwiZXhwIjoxNjE4NTUxMDEwLCJpc3MiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDBANDA3MTUyNmUtNjg0NS00YTY4LWI2MTAtZmFhNDQ2ZTVlYTI2IiwiYXVkIjoiMDAwMDAwMDItMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL2F0dGFjaG1lbnRzLm9mZmljZS5uZXRANDA3MTUyNmUtNjg0NS00YTY4LWI2MTAtZmFhNDQ2ZTVlYTI2IiwiaGFwcCI6Im93YSJ9.Mp0w04OqsmiUfe-GlfG_ET0X5XQzej7Wr0ZF1iGFLPxa8Lbf3Q6veCSwp9IC_HGwd872EwcpMHlq9197iSPzDOhKDtWscmHd4t4n717Mh8ez9TuZR-DKcBQ-3eXebRjAMJlWzsyydhqX_KZsESwnk4dximfjde6uW3hkR1mbqx28t_GGUzOXP4D-cQL4I2sV9rfixUQP2YneY_FoSwbY94L-MF2VBN4StS0zUCzeGxy8U37X-2pgJ-y0YVaCHX-9wmMkW9Dx6tKY05KnAX7AvPnUulnqfnXzgxwfEgTGr6HVbeXhNB7sCOLuCIbwe3zjzHr4kiNo4LRuTBmAhXKILg&amp;X-OWA-CANARY=Hr0yQDVDOki-Vcq5AytJAlDLIWiXANkYIHFC5R-55v9qZGdT85Sp4vPao4-hDWcitbi5hrrYRlw.&amp;owa=outlook.office.com&amp;scriptVer=20210412005.10&amp;animation=true"
-                                        border="0" width="64" height="64" alt="Edit photo" id="x_Picture_x0020_7"
-                                        name="x_com_samsung_android_email_attachmentprovider_6_53692_RAW_1617949115483"
-                                        style="width: 0.6666in; height: 0.6666in; cursor: pointer;"
-                                        crossorigin="use-credentials"></span></p>
+                            <p class="x_MsoNormal"><span style="font-size:8.0pt"><img 
+                            src="https://theofficeanalytics.files.wordpress.com/2017/11/dwight.jpeg?w=1200"
+                            style="height:64px; width: 64px; border-radius:10px"></span></p>
                         </td>
                         <td valign="top" width="250" style="width:187.45pt; padding:0in 5.4pt 0in 5.4pt">
                             <p class="x_MsoNormal"><b><span
-                                        style="font-size:11.0pt; font-family:&quot;Arial&quot;,sans-serif; color:#7FC41C">Chris
-                                        Harrison</span></b><b><span
+                                        style="font-size:11.0pt; font-family:&quot;Arial&quot;,sans-serif; color:#7FC41C">${fullname}</span></b><b><span
                                         style="font-family:&quot;Arial&quot;,sans-serif; color:#7FC41C"></span></b></p>
                             <p class="x_MsoNormal"><span
-                                    style="font-size:8.0pt; font-family:&quot;Arial&quot;,sans-serif">Chief Executive
-                                    Officer</span></p>
+                                    style="font-size:8.0pt; font-family:&quot;Arial&quot;,sans-serif">${designationname}</span></p>
                             <table border="0" width="100" cellpadding="0" cellspacing="0" class="x_MsoNormalTable"
                                 style="width:75.0pt">
                                 <tbody>
                                     <tr>
                                         <td style="padding:3.75pt 3.75pt 0in 0in">
                                             <p class="x_MsoNormal"><a
-                                                    href="https://www.linkedin.com/in/christopherharrisonesq/"
+                                                    href="${linkedinicon}"
                                                     target="_blank" rel="noopener noreferrer" data-auth="NotApplicable"
                                                     data-linkindex="0" data-ogsc=""
                                                     style="color: rgb(228, 159, 255) !important;"><span
@@ -177,10 +169,10 @@ function oneworld(id) {
                                                     data-ogsc="black"></span></p>
                                         </td>
                                         <td style="padding:3.75pt 3.75pt 0in 0in">
-                                            <p class="x_MsoNormal"><a href="https://twitter.com/StepWiseAfrica"
+                                            <p class="x_MsoNormal"><a href="${twittericon}"
                                                     target="_blank" rel="noopener noreferrer" data-auth="NotApplicable"
                                                     data-linkindex="1" data-ogsc=""
-                                                    style="color: rgb(228, 159, 255) !important;"><span
+                                                    style="color: rgb(228, 159, 255) !important; display:${twittericon?`block`:`none`}"><span
                                                         style="font-size: 13.5pt; font-family: Times; color: rgb(222, 152, 255) !important; text-decoration: none;"
                                                         data-ogsc="blue"><img id="twitterid" 
                                                             naturalheight="0" naturalwidth="0"
@@ -191,7 +183,7 @@ function oneworld(id) {
                                                     data-ogsc="black"></span></p>
                                         </td>
                                         <td style="padding:3.75pt 3.75pt 0in 0in">
-                                            <p class="x_MsoNormal"><a href="https://twitter.com/StepWiseAfrica"
+                                            <p class="x_MsoNormal"><a href="${facebookicon}"
                                                     target="_blank" rel="noopener noreferrer" data-auth="NotApplicable"
                                                     data-linkindex="1" data-ogsc=""
                                                     style="color: rgb(228, 159, 255) !important; display:${facebookicon?`block`:`none`}"><span
@@ -205,7 +197,7 @@ function oneworld(id) {
                                                     data-ogsc="black"></span></p>
                                         </td>
                                         <td style="padding:3.75pt 3.75pt 0in 0in">
-                                            <p class="x_MsoNormal"><a href="https://twitter.com/StepWiseAfrica"
+                                            <p class="x_MsoNormal"><a href="${youtubeicon}"
                                                     target="_blank" rel="noopener noreferrer" data-auth="NotApplicable"
                                                     data-linkindex="1" data-ogsc=""
                                                     style="color: rgb(228, 159, 255) !important;"><span
@@ -219,7 +211,7 @@ function oneworld(id) {
                                                     data-ogsc="black"></span></p>
                                         </td>
                                         <td style="padding:3.75pt 3.75pt 0in 0in">
-                                            <p class="x_MsoNormal"><a href="https://twitter.com/StepWiseAfrica"
+                                            <p class="x_MsoNormal"><a href="${whatsappicon}"
                                                     target="_blank" rel="noopener noreferrer" data-auth="NotApplicable"
                                                     data-linkindex="1" data-ogsc=""
                                                     style="color: rgb(228, 159, 255) !important;"><span
@@ -242,20 +234,20 @@ function oneworld(id) {
             <p class="x_MsoNormal"><b><span lang="FR-CA" style="font-size: 8pt; color: rgb(255, 169, 59) !important;"
                         data-ogsc="rgb(225, 127, 0)">Mobile</span></b><b><span lang="FR-CA"
                         style="font-size:8.0pt">:</span></b><span lang="FR-CA" style="font-size:8.0pt">
-                    +1-512-771-0520&nbsp; <b><span style="color: rgb(255, 169, 59) !important;"
-                            data-ogsc="rgb(225, 127, 0)">Email</span>:</b> <a href="mailto:chris@stepwise.net"
+                    ${phonenumber}&nbsp; <b><span style="color: rgb(255, 169, 59) !important;"
+                            data-ogsc="rgb(225, 127, 0)">Email</span>:</b> <a href="mailto:${emailname}"
                         target="_blank" rel="noopener noreferrer" data-auth="NotApplicable" data-linkindex="5"
                         data-ogsc="" style="color: rgb(228, 159, 255) !important;"><span
                             style="color: rgb(138, 184, 255) !important;"
-                            data-ogsc="rgb(5, 99, 193)">chris@stepwise.net</span></a> </span></p>
+                            data-ogsc="rgb(5, 99, 193)">${emailname}</span></a> </span></p>
             <hr width="100%" style="border: 2px solid #7FC41C; float:left; clear:both;" ><br>
             <p class="x_MsoNormal"><b><span style="font-size: 8pt; color: rgb(255, 169, 59) !important;"
                         data-ogsc="rgb(225, 127, 0)">Web</span></b><b><span style="font-size:8.0pt">:</span></b><span
-                    style="font-size:8.0pt"> <a href="http://www.stepwise.net" target="_blank" rel="noopener noreferrer"
+                    style="font-size:8.0pt"> <a href="${websitename}" target="_blank" rel="noopener noreferrer"
                         data-auth="NotApplicable" data-linkindex="6" data-ogsc=""
                         style="color: rgb(228, 159, 255) !important;"><span
                             style="color: rgb(138, 184, 255) !important;"
-                            data-ogsc="rgb(5, 99, 193)">www.stepwise.net</span></a> &nbsp;<b><span
+                            data-ogsc="rgb(5, 99, 193)">${websitename}</span></a> &nbsp;<b><span
                             style="color: rgb(255, 169, 59) !important;"
                             data-ogsc="rgb(225, 127, 0)">Address</span>:</b> 701 Brazos St., Austin, TX 78701</span></p>
         </div>
@@ -278,7 +270,7 @@ function oneworld(id) {
                                 <tbody>
                                     <tr>
                                         <td style="margin: 0.1px;padding: 4px 0 0 0;"><a target="_blank"
-                                                class="social_link  facebook" href="#"
+                                                class="social_link  facebook" href="${facebookicon}"
                                                 style="display: block;border-radius: 15%;width:22px;height:22px;text-align: center;line-height:1; background-color: #854416;"><img
                                                 src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/facebook-icon-2x.png"
                                                 alt="facebook" color="#6A78D1" height="24"
@@ -287,7 +279,7 @@ function oneworld(id) {
                                     </tr>
                                     <tr>
                                         <td style="margin: 0.1px;padding: 4px 0 0 0;"><a target="_blank"
-                                                class="social_link  twitter" href="#"
+                                                class="social_link  twitter" href="${twittericon}"
                                                 style="display: block;border-radius: 15%;width:22px;height:22px;text-align: center;line-height:1; background-color: #854416;"><img
                                                 src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/twitter-icon-2x.png"
                                                 alt="twitter" color="#6A78D1" height="24"
@@ -296,7 +288,7 @@ function oneworld(id) {
                                     </tr>
                                     <tr>
                                         <td style="margin: 0.1px;padding: 4px 0 0 0;"><a target="_blank"
-                                                class="social_link  linkedin" href="#"
+                                                class="social_link  linkedin" href="${linkedinicon}"
                                                 style="display: block;border-radius: 15%;width:22px;height:22px;text-align: center;line-height:1; background-color: #854416;"><img
                                                 src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/linkedin-icon-2x.png"
                                                 alt="linkedin" color="#6A78D1" height="24"

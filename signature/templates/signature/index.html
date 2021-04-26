@@ -2,8 +2,36 @@
 {% load static %}
 
 {% block content %}
+<script>
+    $(document).ready(function() {
+        $('#ajax').submit(function(e) {
+            e.preventDefault();  // disables submit's default action
+            var data = new FormData($('#ajax').get(0));
+            console.log(data);
 
+            $.ajax({
+                url: '/upload/',
+                type: 'POST',
+                data: data,
+                processData: false,
+                contentType: 'multipart/form-data',
+                success: function(data) {
+                    data = JSON.parse(data); // converts string of json to object
+                    $('#photo').html('<img src="{{'+data.image.url+ '}}" />');
+                    // <h2>title</h2> You do not use 'title' in your project !!
+                    // alt=title see previous comment
+                }
+            });
+            return false;
+        });
+    });
+
+</script>
+<br><br>
 <div class="container-fluid">
+
+    <h2 class="text-center">Use this form to create your e-signature</h2>
+<br><br>
     <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 editor-tab">
             <nav>
@@ -20,7 +48,8 @@
             </nav>
             <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                    <form>
+                    <form method="post" id="ajax" enctype="multipart/form-data">
+                        {% csrf_token %}
                         <div class="form-group">
                             <input type="text" class="form-control" id="form_names" aria-describedby="names"
                                 placeholder="Names">
@@ -49,10 +78,10 @@
                             <input type="text" class="form-control" id="form_website" aria-describedby="website"
                                 placeholder="Website">
                         </div>
-                    </form>
+                    
                 </div>
                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                    <form>
+                    
                         <div class="form-group">
                             <input type="text" id="form_linkedin" class="form-control" id="linkedin" aria-describedby="linkedin"
                                 placeholder="https://linkedin.com/johnwick">
@@ -73,13 +102,30 @@
                             <input type="text" id="form_github" class="form-control" id="github" aria-describedby="github"
                                 placeholder="https://github.com/johnwick">
                         </div>
-                    </form>
+                        <div class="form-group">
+                            <input type="text" id="form_youtube" class="form-control" id="youtube" aria-describedby="youtube"
+                                placeholder="https://youtube.com/johnwick">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="form_whatsapp" class="form-control" id="whatsapp" aria-describedby="whatsapp"
+                                placeholder="https://whatsapp.com/johnwick">
+                        </div>
+                    
                 </div>
                 <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                    <form method="post">
-                        {% csrf_token %}
-                        {{form.image}}
-                        <input type="submit" value="Upload" class="btn btn-primary">
+                    
+                        
+                        <br>
+                        <input type="file" name="img"/>
+                        <br>
+                        <br>
+                        <button id="submit" type="submit">Upload</button>
+                        <!-- {{form.image}} -->
+                        <!-- <input type="submit" value="Upload" class="btn btn-primary"> -->
+                        <h1> test </h1>
+                        <div id="photo">
+                            <img src="{{ photo.image.url }}">
+                        </div>
                     </form>
                 </div>
                 <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
@@ -95,10 +141,10 @@
                             </label>
                             <label class="btn paymentMethod">
                                 <div class="method amex"></div>
-                                <input type="radio" name="template" onchange="oneworld(3)">
+                                <input type="radio"  name="template" onchange="oneworld(3)">
                             </label>
                             <label class="btn paymentMethod">
-                                <div class="method ez-ch"></div>
+                                <div class="method ez-cash"></div>
                                 <input type="radio" name="template" onchange="oneworld(4)">
                             </label>
                             
@@ -320,10 +366,7 @@
     </div>
 </div>
 
-<p>Email me at <a class="js-emaillink" href="mailto:matt@example.co.uk">matt@example.co.uk</a></p>
-<p><button class="js-emailcopybtn">Copy</button></p>
-<p><button class="copy">Copy Final</button></p>
-
-<p><button class="samplecopybtn">Copy</button></p>
+<center><button class="btn btn-primary samplecopybtn">Copy this signature</button></center>
+<br><br>
 
 {% endblock content %}
